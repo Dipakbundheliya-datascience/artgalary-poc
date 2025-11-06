@@ -10,6 +10,11 @@ class ArtGalleryChatbot:
         self.recommender = ArtworkRecommender()
         self.available_filters = self.recommender.get_available_filters()
 
+        # Get price range
+        price_range = self.available_filters.get('price_range', {})
+        min_lakhs = price_range.get('min_lakhs', 2.5)
+        max_lakhs = price_range.get('max_lakhs', 4.9)
+
         # System prompt
         self.system_prompt = f"""You are an art gallery assistant helping buyers discover artwork through natural conversation.
 
@@ -43,10 +48,15 @@ BUDGET EXTRACTION (IMPORTANT):
 - "under 5 lakhs" or "under 500000" → max_price: 500000
 - If no budget mentioned → max_price: 500000
 
+**IMPORTANT - When asking about budget:**
+Always mention our price range in the question. Use this format:
+"Do you have a budget in mind? (We have artworks ranging from ₹{min_lakhs} lakhs to ₹{max_lakhs} lakhs)"
+
 Available options:
 - Styles: {', '.join(self.available_filters['styles'])}
 - Colors: {', '.join(self.available_filters['colors'])}
 - Moods: {', '.join(self.available_filters['moods'])}
+- Price Range: ₹{min_lakhs} lakhs to ₹{max_lakhs} lakhs
 
 When ready to recommend, respond with JSON ONLY (no additional text):
 {{"action": "recommend", "filters": {{"max_price": 200000, "style": "classical", "colors": ["blue"]}}}}
@@ -155,21 +165,8 @@ Otherwise, continue conversation naturally and ask about preferences."""
             else:
                 return "I couldn't find matches. Could you tell me more about what you're looking for?"
 
-        response = f"Based on your preferences, I found {len(artworks)} stunning pieces:\n\n"
-
-        for i, art in enumerate(artworks, 1):
-            price_str = f"₹{art['price']:,}"
-            response += f"{i}. **{art['title']}**\n"
-            if art['artist']:
-                response += f"   Artist: {art['artist']}\n"
-            response += f"   Style: {', '.join(art['style'])}\n"
-            response += f"   Colors: {', '.join(art['colors'])}\n"
-            response += f"   Mood: {', '.join(art['mood'])}\n"
-            response += f"   Price: {price_str}\n"
-            response += f"   [View Image]({art['image_url']})\n\n"
-
-        response += "Would you like to know more about any of these pieces?"
-        return response
+        # Simple message when artworks are found - details shown in cards
+        return f"Here are {len(artworks)} stunning artworks that match your preferences! Feel free to explore them below."
 
     def chat(self, messages: List[Dict]) -> Dict[str, Any]:
         """Process chat message and return response"""

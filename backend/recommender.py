@@ -99,14 +99,25 @@ class ArtworkRecommender:
         styles = set()
         colors = set()
         moods = set()
+        prices = []
 
         for art in self.artworks:
             styles.update(art['style'])
             colors.update(art['colors'])
             moods.update(art['mood'])
+            prices.append(art['price'])
+
+        min_price = min(prices) if prices else 0
+        max_price = max(prices) if prices else 0
 
         return {
             'styles': sorted(list(styles)),
             'colors': sorted(list(colors)),
-            'moods': sorted(list(moods))
+            'moods': sorted(list(moods)),
+            'price_range': {
+                'min': min_price,
+                'max': max_price,
+                'min_lakhs': round(min_price / 100000, 1),
+                'max_lakhs': round(max_price / 100000, 1)
+            }
         }

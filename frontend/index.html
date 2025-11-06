@@ -474,6 +474,40 @@
             transform: translateY(-2px);
         }
 
+        .export-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--secondary) 0%, #0f766e 100%);
+            color: white;
+            border: none;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 16px rgba(20, 184, 166, 0.3);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
+        }
+
+        .export-btn:active {
+            transform: translateY(0);
+        }
+
+        .export-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
         .badge.color {
             background: linear-gradient(135deg, #dbeafe, #bfdbfe);
             color: #1e3a8a;
@@ -579,7 +613,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h1>Art Gallery AI Assistant</h1>
+                    <h1>MoodMatch AI</h1>
                     <p>Discover your perfect artwork through conversation</p>
                 </div>
             </div>
@@ -615,6 +649,7 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

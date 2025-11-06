@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import Response
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
 import os
+import httpx
+import base64
 from dotenv import load_dotenv
 from chatbot import ArtGalleryChatbot
 
@@ -97,6 +100,34 @@ async def health_check():
         "status": "healthy",
         "chatbot_initialized": chatbot is not None
     }
+
+@app.get("/proxy-image")
+async def proxy_image(url: str):
+    """Proxy image requests to avoid CORS issues"""
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            # Fetch the image
+            response = await client.get(url)
+            response.raise_for_status()
+
+            # Convert to base64
+            image_base64 = base64.b64encode(response.content).decode('utf-8')
+
+            # Determine content type
+            content_type = response.headers.get('content-type', 'image/jpeg')
+
+            # Return as data URL
+            data_url = f"data:{content_type};base64,{image_base64}"
+
+            return {
+                "success": True,
+                "data_url": data_url,
+                "content_type": content_type
+            }
+    except httpx.HTTPError as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch image: {str(e)}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing image: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
