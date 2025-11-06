@@ -65,25 +65,29 @@ function addArtworkCards(artworks) {
         }).format(artwork.price);
 
         card.innerHTML = `
-            <img src="${artwork.image_url}" alt="${artwork.title}" onerror="this.src='https://via.placeholder.com/400x300?text=Image+Not+Available'">
+            <img src="${artwork.image_url}"
+                 alt="${artwork.title}"
+                 onclick="window.open('${artwork.image_url}', '_blank')"
+                 onerror="this.src='https://via.placeholder.com/400x300?text=Image+Not+Available'">
             <div class="artwork-title">${artwork.title}</div>
+            ${artwork.artist ? `<div style="font-size: 15px; color: #64748b; margin-bottom: 8px; font-style: italic;">by ${artwork.artist}</div>` : ''}
+            <div class="artwork-price">${priceFormatted}</div>
             <div class="artwork-info">
-                ${artwork.artist ? `<div><strong>Artist:</strong> ${artwork.artist}</div>` : ''}
-                <div><strong>Price:</strong> ${priceFormatted}</div>
                 <div><strong>Medium:</strong> ${artwork.medium}</div>
-                <div>
-                    <strong>Style:</strong>
-                    ${artwork.style.map(s => `<span class="badge">${s}</span>`).join('')}
-                </div>
-                <div>
-                    <strong>Colors:</strong>
-                    ${artwork.colors.map(c => `<span class="badge">${c}</span>`).join('')}
-                </div>
-                <div>
-                    <strong>Mood:</strong>
-                    ${artwork.mood.map(m => `<span class="badge">${m}</span>`).join('')}
-                </div>
                 ${artwork.dimensions ? `<div><strong>Dimensions:</strong> ${artwork.dimensions}</div>` : ''}
+                ${artwork.period ? `<div><strong>Period:</strong> ${artwork.period}</div>` : ''}
+                <div style="margin-top: 12px;">
+                    <strong>Style:</strong><br>
+                    ${artwork.style.map(s => `<span class="badge style">${s}</span>`).join('')}
+                </div>
+                <div style="margin-top: 8px;">
+                    <strong>Colors:</strong><br>
+                    ${artwork.colors.map(c => `<span class="badge color">${c}</span>`).join('')}
+                </div>
+                <div style="margin-top: 8px;">
+                    <strong>Mood:</strong><br>
+                    ${artwork.mood.map(m => `<span class="badge mood">${m}</span>`).join('')}
+                </div>
             </div>
         `;
 

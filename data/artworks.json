@@ -1,1007 +1,344 @@
 [
   {
-    "id": "320804",
-    "title": "Hanging (?) Fragment",
-    "artist": "",
-    "price": 400000,
+    "id": "demo_1",
+    "title": "Venice, from the Porch of Madonna della Salute",
+    "artist": "Joseph Mallord William Turner",
+    "price": 450000,
     "currency": "INR",
     "style": [
-      "fine-art"
+      "portrait",
+      "classical"
     ],
     "colors": [
-      "multicolor"
+      "black",
+      "white"
     ],
-    "medium": "Camelid hair, cotton",
+    "medium": "Oil on canvas",
     "mood": [
-      "contemplative"
+      "elegant",
+      "dramatic",
+      "bold"
     ],
-    "dimensions": "H. 48 x W. 23 in. (121.9 x 58.4 cm)",
-    "period": "late 16th–17th century",
+    "dimensions": "36 x 48 1/8 in. (91.4 x 122.2 cm)",
+    "period": "ca. 1835",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ao/original/TR.489.2010_a.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ao/web-large/TR.489.2010_a.jpg",
-    "description": "Peruvian artwork from late 16th–17th century. Gift of Gloria Granz Gonick, 2011",
-    "department": "The Michael C. Rockefeller Wing",
-    "culture": "Peruvian"
-  },
-  {
-    "id": "192693",
-    "title": "Cassone with painted front panel depicting the Conquest of Trebizond",
-    "artist": "Apollonio di Giovanni di Tomaso",
-    "price": 180000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "yellow"
-    ],
-    "medium": "Poplar wood, linen, polychromed and gilded gesso with panel painted in tempera and gold",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "H. 39-1/2 x W. 77 x D. 32-7/8 in.  (100.3 x 195.6 x 83.5 cm); Painted surface 15 1/4 x 49 1/2 in. (38.7 x 125.7 cm)",
-    "period": "after ca. 1461",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/es/original/DP106672.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/es/web-large/DP106672.jpg",
-    "description": " artwork from after ca. 1461. John Stewart Kennedy Fund, 1914",
-    "department": "European Sculpture and Decorative Arts",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP169568.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP169568.jpg",
+    "description": "Venice, from the Porch of Madonna della Salute",
+    "department": "European Paintings",
     "culture": ""
   },
   {
-    "id": "453312",
-    "title": "Jewelry Elements",
-    "artist": "",
+    "id": "demo_2",
+    "title": "The Death of Socrates",
+    "artist": "Jacques Louis David",
     "price": 380000,
     "currency": "INR",
     "style": [
-      "fine-art"
+      "portrait",
+      "classical"
     ],
     "colors": [
+      "brown",
+      "gold"
+    ],
+    "medium": "Oil on canvas",
+    "mood": [
+      "elegant",
+      "contemplative"
+    ],
+    "dimensions": "51 x 77 1/4 in. (129.5 x 196.2 cm)",
+    "period": "1787",
+    "availability": "available",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-13139-001.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-13139-001.jpg",
+    "description": "The Death of Socrates",
+    "department": "European Paintings",
+    "culture": ""
+  },
+  {
+    "id": "demo_3",
+    "title": "The Dance Class",
+    "artist": "Edgar Degas",
+    "price": 320000,
+    "currency": "INR",
+    "style": [
+      "portrait",
+      "classical"
+    ],
+    "colors": [
+      "blue",
+      "white",
       "yellow"
     ],
-    "medium": "Gold sheet; worked, chased, and set  with turquoise, gray chalcedony, and glass",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Large medallion:\r\n                                H. 2 7/8 in. (7.3 cm)\r\n                                W. 2 3/4 in. (7 cm)\r\nHalf medallion: \r\n                             H. 1 3/4 in. (4.4 cm)\r\n                             W. 2 3/4 in. (7 cm)\r\nCartouches:\r\n                              H. 3/4 in. (1.9 cm)\r\n                              W. 1/2 in. (1.3 cm)",
-    "period": "late 14th–16th century",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/is/original/DP236378.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/is/web-large/DP236378.jpg",
-    "description": " artwork from late 14th–16th century. Purchase, Rogers Fund and Habib Anavian Gift, 1989",
-    "department": "Islamic Art",
-    "culture": ""
-  },
-  {
-    "id": "435875",
-    "title": "Madame Cézanne (Hortense Fiquet, 1850–1922) in the Conservatory",
-    "artist": "Paul Cézanne",
-    "price": 390000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
     "medium": "Oil on canvas",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "36 1/4 x 28 3/4 in. (92.1 x 73 cm)",
-    "period": "1891",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP317780.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP317780.jpg",
-    "description": " artwork from 1891. Bequest of Stephen C. Clark, 1960",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "436553",
-    "title": "A City on a Rock",
-    "artist": "Goya",
-    "price": 300000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on canvas",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "33 × 41 in. (83.8 × 104.1 cm)",
-    "period": "",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-17460-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-17460-001.jpg",
-    "description": " artwork from . H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "436885",
-    "title": "Scene from a Novella",
-    "artist": "Liberale da Verona",
-    "price": 310000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Tempera on wood",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "13 x 16 1/8 in. (33 x 41 cm)",
-    "period": "",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT8310.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT8310.jpg",
-    "description": " artwork from . Gwynne Andrews Fund, 1986",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "52002",
-    "title": "Two Women",
-    "artist": "Kitagawa Utamaro",
-    "price": 480000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Woodblock print; ink and color on paper",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "15 3/8 x 10 1/8 in. (39.1 x 25.7 cm)",
-    "period": "ca. 1790",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP141296.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/as/web-large/DP141296.jpg",
-    "description": "Japan artwork from ca. 1790. The Howard Mansfield Collection, Purchase, Rogers Fund, 1936",
-    "department": "Asian Art",
-    "culture": "Japan"
-  },
-  {
-    "id": "437423",
-    "title": "The Immaculate Conception",
-    "artist": "Guido Reni",
-    "price": 210000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on canvas",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "105 1/2 x 73 in. (268 x 185.4 cm)",
-    "period": "1627",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT1138.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1138.jpg",
-    "description": " artwork from 1627. Victor Wilbour Memorial Fund, 1959",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "435876",
-    "title": "Madame Cézanne (Hortense Fiquet, 1850–1922) in a Red Dress",
-    "artist": "Paul Cézanne",
-    "price": 410000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "red"
-    ],
-    "medium": "Oil on canvas",
-    "mood": [
-      "energetic"
-    ],
-    "dimensions": "45 7/8 × 35 1/4 in. (116.5 × 89.5 cm)",
-    "period": "1888–90",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP320128.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP320128.jpg",
-    "description": " artwork from 1888–90. The Mr. and Mrs. Henry Ittleson Jr. Purchase Fund, 1962",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "460281",
-    "title": "Tabernacle Polyptych with the Madonna and Child and Scenes from the Life of Christ",
-    "artist": "",
-    "price": 420000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "white"
-    ],
-    "medium": "Ivory with traces of original gilding and polychromy; silver hinges.",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "H. 9.7 cm, w. 13.1 cm (with open wings).",
-    "period": "ca. 1275–1300",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/rl/original/SLP1553-1.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/rl/web-large/SLP1553-1.jpg",
-    "description": "Northern France (?) artwork from ca. 1275–1300. Robert Lehman Collection, 1975",
-    "department": "Robert Lehman Collection",
-    "culture": "Northern France (?)"
-  },
-  {
-    "id": "197461",
-    "title": "Saint Bernardino of Siena",
-    "artist": "Fulvio Signorini",
-    "price": 400000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Bronze, partially oil-gilt",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Overall (confirmed): 58 1/2 in., 591 lb. (148.6 cm, 268.1 kg)",
-    "period": "ca. 1600",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/es/original/DP-22143-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/es/web-large/DP-22143-001.jpg",
-    "description": " artwork from ca. 1600. Harris Brisbane Dick Fund, 1933",
-    "department": "European Sculpture and Decorative Arts",
-    "culture": ""
-  },
-  {
-    "id": "49179",
-    "title": "Landscapes",
-    "artist": "Shitao (Zhu Ruoji)",
-    "price": 330000,
-    "currency": "INR",
-    "style": [
-      "landscape"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Album of eight leaves; ink and color on paper",
     "mood": [
       "serene",
       "peaceful"
     ],
-    "dimensions": "8 1/4 × 12 3/8 in. (21 × 31.4 cm)",
-    "period": "ca. 1690s",
+    "dimensions": "32 7/8 x 30 3/8 in. (83.5 x 77.2 cm)",
+    "period": "1874",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP162807.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/as/web-large/DP162807.jpg",
-    "description": "China artwork from ca. 1690s. Bequest of John M. Crawford Jr., 1988",
-    "department": "Asian Art",
-    "culture": "China"
-  },
-  {
-    "id": "416122",
-    "title": "The Sale of the Pet Lamb",
-    "artist": "Otto Knirsch",
-    "price": 430000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "red"
-    ],
-    "medium": "Hand-colored lithograph",
-    "mood": [
-      "energetic"
-    ],
-    "dimensions": "Image: 15 1/4 × 19 3/8 in. (38.8 × 49.2 cm)\r\nImage with text: 16 3/4 × 19 3/8 in. (42.5 × 49.2 cm)\r\nSheet: 19 11/16 × 23 11/16 in. (50 × 60.1 cm)",
-    "period": "1857",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/dp/original/DP-39490-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP-39490-001.jpg",
-    "description": " artwork from 1857. Gift of A. S. Colgate, 1952",
-    "department": "Drawings and Prints",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-20101-001.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-20101-001.jpg",
+    "description": "The Dance Class",
+    "department": "European Paintings",
     "culture": ""
   },
   {
-    "id": "436986",
-    "title": "Portrait of a Woman",
-    "artist": "Quinten Massys",
-    "price": 300000,
+    "id": "demo_4",
+    "title": "Self-Portrait",
+    "artist": "Rembrandt (Rembrandt van Rijn)",
+    "price": 410000,
     "currency": "INR",
     "style": [
-      "portrait"
+      "portrait",
+      "classical"
     ],
     "colors": [
-      "multicolor"
+      "black",
+      "white"
+    ],
+    "medium": "Oil on canvas",
+    "mood": [
+      "contemplative",
+      "timeless"
+    ],
+    "dimensions": "31 5/8 x 26 1/2 in. (80.3 x 67.3 cm)",
+    "period": "1660",
+    "availability": "available",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-16323-001.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-16323-001.jpg",
+    "description": "Self-Portrait",
+    "department": "European Paintings",
+    "culture": ""
+  },
+  {
+    "id": "demo_5",
+    "title": "The Harvesters",
+    "artist": "Pieter Bruegel the Elder",
+    "price": 290000,
+    "currency": "INR",
+    "style": [
+      "portrait",
+      "impressionist"
+    ],
+    "colors": [
+      "pink",
+      "white"
     ],
     "medium": "Oil on wood",
     "mood": [
       "intimate",
-      "expressive"
+      "elegant"
     ],
-    "dimensions": "19 x 17 in. (48.3 x 43.2 cm)",
-    "period": "ca. 1520",
+    "dimensions": "Overall, including added strips at top, bottom, and right, 46 7/8 x 63 3/4 in. (119 x 162 cm); original painted surface 45 7/8 x 62 7/8 in. (116.5 x 159.5 cm)",
+    "period": "1565",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT1461.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1461.jpg",
-    "description": " artwork from ca. 1520. The Friedsam Collection, Bequest of Michael Friedsam, 1931",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP119115.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP119115.jpg",
+    "description": "The Harvesters",
     "department": "European Paintings",
     "culture": ""
   },
   {
-    "id": "697201",
-    "title": "The West Wind, Lynmouth",
-    "artist": "Sir Edward John Poynter",
-    "price": 270000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Watercolor and gouache (bodycolor)",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Sheet: 12 in. × 18 1/4 in. (30.5 × 46.4 cm)",
-    "period": "1866",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/dp/original/DP854935.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP854935.jpg",
-    "description": " artwork from 1866. Harry G. Sperling Fund, 2015",
-    "department": "Drawings and Prints",
-    "culture": ""
-  },
-  {
-    "id": "436302",
-    "title": "The Good Samaritan",
-    "artist": "Domenico Fetti",
-    "price": 310000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on wood",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "23 5/8 x 17 in. (60 x 43.2 cm)",
-    "period": "ca. 1618–22",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP278746.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP278746.jpg",
-    "description": " artwork from ca. 1618–22. Rogers Fund, 1930",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "320347",
-    "title": "Feathered serpent head",
-    "artist": "Teotihuacan artist(s)",
-    "price": 70000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "red"
-    ],
-    "medium": "Stone, pigment",
-    "mood": [
-      "energetic"
-    ],
-    "dimensions": "W. 20 1/2 × D. 23 5/8 × L. 16 15/16 in. (52 × 60 × 43 cm)",
-    "period": "100-500 CE",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ao/original/DP-39201-004.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ao/web-large/DP-39201-004.jpg",
-    "description": "Teotihuacan artwork from 100-500 CE. Museum Purchase, 1900",
-    "department": "The Michael C. Rockefeller Wing",
-    "culture": "Teotihuacan"
-  },
-  {
-    "id": "310513",
-    "title": "Ornament",
-    "artist": "Maya artist(s)",
-    "price": 210000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Jade",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "H. 1/4 × W. 1 1/2 × D. 3 1/2 in. (0.6 × 3.8 × 8.9 cm)",
-    "period": "400–900 CE",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ao/original/DP-25387-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ao/web-large/DP-25387-001.jpg",
-    "description": "Maya artwork from 400–900 CE. The Michael C. Rockefeller Memorial Collection, Gift of Mr. and Mrs. Julius Carlebach, 1960",
-    "department": "The Michael C. Rockefeller Wing",
-    "culture": "Maya"
-  },
-  {
-    "id": "726264",
-    "title": "Cartouche with an Alphabet, in: Targhe ed altri ornati di varie e capricciose invenzioni (Cartouches and other ornaments of various and capricious invention, page 41)",
-    "artist": "Georges Reverdy",
-    "price": 340000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Engraving",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Sheet: 7 7/8 × 10 5/16 in. (20 × 26.2 cm)\r\nPlate: 5 1/8 × 11 13/16 in. (13 × 30 cm)\r\nOverall: 8 1/4 × 10 5/8 in. (21 × 27 cm)",
-    "period": "ca. 1553–65",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/dp/original/DP703730.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/dp/web-large/DP703730.jpg",
-    "description": " artwork from ca. 1553–65. Purchase, Daniel Ergmann Gift, 2014",
-    "department": "Drawings and Prints",
-    "culture": ""
-  },
-  {
-    "id": "437869",
-    "title": "Juan de Pareja (ca. 1608–1670)",
-    "artist": "Velázquez (Diego Rodríguez de Silva y Velázquez)",
-    "price": 130000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on canvas",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "32 x 27 1/2 in. (81.3 x 69.9 cm)",
-    "period": "1650",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14286-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14286-001.jpg",
-    "description": " artwork from 1650. Purchase, Fletcher and Rogers Funds, and Bequest of Miss Adelaide Milton de Groot (1876-1967), by exchange, supplemented by gifts from friends of the Museum, 1971",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "436548",
-    "title": "Majas on a Balcony",
-    "artist": "Goya (Francisco de Goya y Lucientes)",
-    "price": 280000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on canvas",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "76 3/4 x 49 1/2in. (194.9 x 125.7cm)",
-    "period": "ca. 1800–1810",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-20750-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-20750-001.jpg",
-    "description": " artwork from ca. 1800–1810. H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "460850",
-    "title": "Portrait medal of Philip II (obverse); Mary Tudor Queen of England (reverse)",
-    "artist": "Jacopo Nizolla da Trezzo",
-    "price": 80000,
-    "currency": "INR",
-    "style": [
-      "portrait"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Silver/copper alloy with traces of lead.",
-    "mood": [
-      "intimate",
-      "expressive"
-    ],
-    "dimensions": "Diam. 6.6 cm, wt. 98.96 g.",
-    "period": "1555",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/rl/original/1294r.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/rl/web-large/1294r.jpg",
-    "description": " artwork from 1555. Robert Lehman Collection, 1975",
-    "department": "Robert Lehman Collection",
-    "culture": ""
-  },
-  {
-    "id": "436155",
-    "title": "The Rehearsal of the Ballet Onstage",
-    "artist": "Edgar Degas",
+    "id": "demo_6",
+    "title": "Wheat Field with Cypresses",
+    "artist": "Vincent van Gogh",
     "price": 480000,
     "currency": "INR",
     "style": [
-      "fine-art"
+      "landscape",
+      "classical"
     ],
     "colors": [
-      "red"
-    ],
-    "medium": "Oil colors freely mixed with turpentine, with traces of watercolor and pastel over pen-and-ink drawing on cream-colored wove paper, laid down on bristol board and mounted on canvas",
-    "mood": [
-      "energetic"
-    ],
-    "dimensions": "21 3/8 x 28 3/4 in. (54.3 x 73 cm)",
-    "period": "ca. 1874",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT1565.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1565.jpg",
-    "description": " artwork from ca. 1874. H. O. Havemeyer Collection, Gift of Horace Havemeyer, 1929",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "444867",
-    "title": "Coin with Sign of Leo",
-    "artist": "",
-    "price": 400000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "yellow"
-    ],
-    "medium": "Gold",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Diam. 3/4 in. (1.9 cm)\r\nD. 1/16 in. (0.2 cm)",
-    "period": "dated 1033 AH/1624 CE",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/is/original/DP33.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/is/web-large/DP33.jpg",
-    "description": " artwork from dated 1033 AH/1624 CE. Bequest of Joseph H. Durkee, 1898",
-    "department": "Islamic Art",
-    "culture": ""
-  },
-  {
-    "id": "437090",
-    "title": "Charles I (1600–1649), King of England",
-    "artist": "Daniël Mijtens",
-    "price": 120000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on canvas",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "78 7/8 x 55 3/8 in. (200.3 x 140.7 cm)",
-    "period": "1629",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-17060-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-17060-001.jpg",
-    "description": " artwork from 1629. Gift of George A. Hearn, 1906",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "435807",
-    "title": "The Smokers",
-    "artist": "Adriaen Brouwer",
-    "price": 260000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on wood",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "18 1/4 × 14 1/2 in. (46.4 × 36.8 cm)",
-    "period": "ca. 1636",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-15904-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-15904-001.jpg",
-    "description": " artwork from ca. 1636. The Friedsam Collection, Bequest of Michael Friedsam, 1931",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "706056",
-    "title": "The Virgin and Child Attended by Angels",
-    "artist": "Manohar",
-    "price": 70000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "blue",
+      "green",
       "yellow",
       "brown"
     ],
-    "medium": "Brown and blue ink with gold on paper",
-    "mood": [
-      "calming"
-    ],
-    "dimensions": "Page: H. 12 5/8 in. (32.1 cm)\r\n           W. 9 3/16 in. (23.3 cm)\r\nDrawing: H. 6 3/16 in. (15.7 cm)\r\n                 W. 3 5/16 in. (8.4 cm)",
-    "period": "ca 1600",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/as/original/DP-832-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-832-001.jpg",
-    "description": "Islamic artwork from ca 1600. Gift of Steven Kossak, The Kronos Collections, 2015",
-    "department": "Asian Art",
-    "culture": "Islamic"
-  },
-  {
-    "id": "437792",
-    "title": "The Apotheosis of the Spanish Monarchy",
-    "artist": "Giovanni Battista Tiepolo",
-    "price": 420000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
     "medium": "Oil on canvas",
     "mood": [
-      "contemplative"
+      "serene",
+      "peaceful"
     ],
-    "dimensions": "Oval painted surface, 32 1/8 x 26 1/8 in. (81.6 x 66.4 cm)",
-    "period": "1760s",
+    "dimensions": "28 13/16 × 36 3/4 in. (73.2 × 93.4 cm)",
+    "period": "1889",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT5155.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT5155.jpg",
-    "description": " artwork from 1760s. Rogers Fund, 1937",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1567.jpg",
+    "description": "Wheat Field with Cypresses",
     "department": "European Paintings",
     "culture": ""
   },
   {
-    "id": "437466",
-    "title": "Christ Blessing, Surrounded by a Donor Family",
-    "artist": "German Painter",
-    "price": 320000,
+    "id": "demo_7",
+    "title": "Madonna and Child",
+    "artist": "Duccio di Buoninsegna",
+    "price": 490000,
     "currency": "INR",
     "style": [
-      "fine-art"
+      "landscape",
+      "impressionist"
     ],
     "colors": [
+      "yellow",
+      "blue",
+      "green"
+    ],
+    "medium": "Tempera and gold on wood",
+    "mood": [
+      "energetic",
+      "bold"
+    ],
+    "dimensions": "Overall, with engaged frame, 11 x 8 1/4 in. (27.9 x 21 cm); painted surface 9 3/8 x 6 1/2 in. (23.8 x 16.5 cm)",
+    "period": "ca. 1290–1300",
+    "availability": "available",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP142735.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP142735.jpg",
+    "description": "Madonna and Child",
+    "department": "European Paintings",
+    "culture": ""
+  },
+  {
+    "id": "demo_8",
+    "title": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinç",
+    "artist": "Edgar Degas",
+    "price": 260000,
+    "currency": "INR",
+    "style": [
+      "landscape",
+      "classical"
+    ],
+    "colors": [
+      "green",
+      "brown"
+    ],
+    "medium": "Oil on canvas",
+    "mood": [
+      "calming",
+      "peaceful"
+    ],
+    "dimensions": "29 x 36 1/2 in. (73.7 x 92.7 cm)",
+    "period": "1865",
+    "availability": "available",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-25460-001.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25460-001.jpg",
+    "description": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinçon?)",
+    "department": "European Paintings",
+    "culture": ""
+  },
+  {
+    "id": "demo_9",
+    "title": "Cypresses",
+    "artist": "Vincent van Gogh",
+    "price": 350000,
+    "currency": "INR",
+    "style": [
+      "landscape",
+      "classical"
+    ],
+    "colors": [
+      "blue",
+      "green"
+    ],
+    "medium": "Oil on canvas",
+    "mood": [
+      "dramatic",
+      "bold"
+    ],
+    "dimensions": "36 3/4 x 29 1/8 in. (93.4 x 74 cm)",
+    "period": "1889",
+    "availability": "available",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP130999.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP130999.jpg",
+    "description": "Cypresses",
+    "department": "European Paintings",
+    "culture": ""
+  },
+  {
+    "id": "demo_10",
+    "title": "Air Raid",
+    "artist": "Joseph Hirsch",
+    "price": 390000,
+    "currency": "INR",
+    "style": [
+      "abstract",
+      "contemporary"
+    ],
+    "colors": [
+      "orange",
+      "red",
       "yellow"
     ],
-    "medium": "Oil and gold on oak",
+    "medium": "Pastel and graphite on orange paper",
     "mood": [
-      "contemplative"
+      "energetic",
+      "dramatic"
     ],
-    "dimensions": "Central panel 31 3/8 x 37 5/8 in. (79.7 x 95.6 cm); each wing 32 x 14 5/8 in. (81.3 x 37.1 cm)",
-    "period": "ca. 1573–82",
+    "dimensions": "20 5/16 × 16 1/2 in. (51.6 × 41.9 cm)",
+    "period": "ca. 1940",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT302497.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT302497.jpg",
-    "description": " artwork from ca. 1573–82. Gift of J. Pierpont Morgan, 1917",
-    "department": "European Paintings",
+    "image_url": "https://images.metmuseum.org/CRDImages/ma/original/sf43.46.9.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ma/web-large/sf43.46.9.jpg",
+    "description": "Air Raid",
+    "department": "Modern and Contemporary Art",
     "culture": ""
   },
   {
-    "id": "436259",
-    "title": "Study Head of a Young Woman",
-    "artist": "Anthony van Dyck",
-    "price": 180000,
+    "id": "demo_11",
+    "title": "Mars and Venus United by Love",
+    "artist": "Paolo Veronese (Paolo Caliari)",
+    "price": 440000,
     "currency": "INR",
     "style": [
+      "impressionist",
       "fine-art"
     ],
     "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on paper, laid down on wood",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "22 1/4 x 16 3/8 in. (56.5 x 41.6 cm)",
-    "period": "ca. 1618–20",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT200196.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT200196.jpg",
-    "description": " artwork from ca. 1618–20. Gift of Mrs. Ralph J. Hines, 1957",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "323710",
-    "title": "Cup",
-    "artist": "",
-    "price": 340000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Ceramic",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "4.37 in. (11.1 cm)",
-    "period": "ca. 3980–3865 BC",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/an/original/ME39_60_2.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/an/web-large/ME39_60_2.jpg",
-    "description": "Iran artwork from ca. 3980–3865 BC. Gift of Museum of Tehran, 1939",
-    "department": "Ancient West Asian Art",
-    "culture": "Iran"
-  },
-  {
-    "id": "322357",
-    "title": "Drachm",
-    "artist": "",
-    "price": 150000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Silver",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Thickness 0.23 cm, Diameter 2 cm",
-    "period": "ca. 40–51 CE",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/an/original/DP-13132-031.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/an/web-large/DP-13132-031.jpg",
-    "description": "Parthian artwork from ca. 40–51 CE. Bequest of Joseph H. Durkee, 1898",
-    "department": "Ancient West Asian Art",
-    "culture": "Parthian"
-  },
-  {
-    "id": "441768",
-    "title": "A Section of the Via Sacra, Rome (The Church of Saints Cosmas and Damian)",
-    "artist": "Christoffer Wilhelm Eckersberg",
-    "price": 280000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
+      "purple",
+      "blue",
+      "green"
     ],
     "medium": "Oil on canvas",
     "mood": [
-      "contemplative"
+      "serene",
+      "expressive"
     ],
-    "dimensions": "12 3/8 x 17 1/8 in. (31.4 x 43.5 cm)",
-    "period": "ca. 1814–15",
+    "dimensions": "81 x 63 3/8 in. (205.7 x 161 cm)",
+    "period": "1570s",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP268211.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP268211.jpg",
-    "description": " artwork from ca. 1814–15. Nineteenth-Century, Modern, and Contemporary Funds, 2012",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP167124.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP167124.jpg",
+    "description": "Mars and Venus United by Love",
     "department": "European Paintings",
     "culture": ""
   },
   {
-    "id": "451725",
-    "title": "\"The Concourse of the Birds\", Folio 11r from a Mantiq al-Tayr (Language of the Birds)",
-    "artist": "Habiballah of Sava",
-    "price": 180000,
+    "id": "demo_12",
+    "title": "The Garden of the Tuileries on a Winter Afternoon",
+    "artist": "Camille Pissarro",
+    "price": 250000,
     "currency": "INR",
     "style": [
-      "fine-art"
+      "portrait",
+      "classical"
     ],
     "colors": [
-      "yellow"
-    ],
-    "medium": "Ink, opaque watercolor, gold, and silver on paper",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Painting: H. 10 in. (25.4 cm)\r\n                W. 4 1/2in. (11.4cm)\r\nPage: H. 13 in. (33 cm)\r\n            W. 8 3/16 in. (20.8 cm)\r\nMat: H. 19 1/4 in. (48.9 cm)\r\n        W. 14 1/4 in. (36.2 cm)",
-    "period": "ca. 1600",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/is/original/DP234083.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/is/web-large/DP234083.jpg",
-    "description": " artwork from ca. 1600. Fletcher Fund, 1963",
-    "department": "Islamic Art",
-    "culture": ""
-  },
-  {
-    "id": "436098",
-    "title": "The Crucifixion",
-    "artist": "Gerard David",
-    "price": 240000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on wood",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "Overall 21 x 15 in. (53.3 x 38.1 cm); painted surface 20 5/8 x 14 3/4 in. (52.5 x 37.5 cm)",
-    "period": "ca. 1495",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-17230-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-17230-001.jpg",
-    "description": " artwork from ca. 1495. Rogers Fund, 1909",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "437368",
-    "title": "Holy Family with an Angel",
-    "artist": "Raffaellino del Garbo (also known as Raffaelle de' Capponi and Raffaelle de' Carli)",
-    "price": 140000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "red"
-    ],
-    "medium": "Tempera on canvas, transferred from wood",
-    "mood": [
-      "energetic"
-    ],
-    "dimensions": "22 x 15 in. (55.9 x 38.1 cm)",
-    "period": "ca. 1490",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-15089-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-15089-001.jpg",
-    "description": " artwork from ca. 1490. Bequest of Benjamin Altman, 1913",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "435725",
-    "title": "Christ's Descent into Hell",
-    "artist": "Hieronymus Bosch",
-    "price": 340000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Oil on wood",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "21 x 46 in. (53.3 x 116.8 cm)",
-    "period": "",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-1207-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-1207-001.jpg",
-    "description": " artwork from . Harris Brisbane Dick Fund, 1926",
-    "department": "European Paintings",
-    "culture": ""
-  },
-  {
-    "id": "437218",
-    "title": "The Card Party",
-    "artist": "Caspar Netscher",
-    "price": 230000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
+      "red",
+      "brown"
     ],
     "medium": "Oil on canvas",
     "mood": [
-      "contemplative"
+      "elegant",
+      "dramatic"
     ],
-    "dimensions": "19 3/4 x 17 3/4 in. (50.2 x 45.1 cm)",
-    "period": "ca. 1665",
+    "dimensions": "28 7/8 x 36 3/8 in. (73.3 x 92.4 cm)",
+    "period": "1899",
     "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP143200.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP143200.jpg",
-    "description": " artwork from ca. 1665. Marquand Collection, Gift of Henry G. Marquand, 1889",
+    "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-037.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-037.jpg",
+    "description": "The Garden of the Tuileries on a Winter Afternoon",
     "department": "European Paintings",
     "culture": ""
-  },
-  {
-    "id": "226426",
-    "title": "Charles I",
-    "artist": "Wenceslaus Hollar",
-    "price": 130000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Silk and metal thread on silk",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "H. 6 x W. 4 1/2 inches (15.2 x 11.4 cm)",
-    "period": "1650–70",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/es/original/DP152958.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/es/web-large/DP152958.jpg",
-    "description": " artwork from 1650–70. Purchase, Mrs. Thomas J. Watson Gift, 1939",
-    "department": "European Sculpture and Decorative Arts",
-    "culture": ""
-  },
-  {
-    "id": "310480",
-    "title": "Head of a Rain God",
-    "artist": "",
-    "price": 300000,
-    "currency": "INR",
-    "style": [
-      "fine-art"
-    ],
-    "colors": [
-      "multicolor"
-    ],
-    "medium": "Fossiliferous limestone",
-    "mood": [
-      "contemplative"
-    ],
-    "dimensions": "H. 13 3/4 x W. 11 7/8 x D. 9 3/8 in. (34.9 x 30.2 x 23.8 cm)",
-    "period": "10th–11th century",
-    "availability": "available",
-    "image_url": "https://images.metmuseum.org/CRDImages/ao/original/DP-23862-001.jpg",
-    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ao/web-large/DP-23862-001.jpg",
-    "description": "Maya artwork from 10th–11th century. The Michael C. Rockefeller Memorial Collection, Gift of Nelson A. Rockefeller, 1963",
-    "department": "The Michael C. Rockefeller Wing",
-    "culture": "Maya"
   }
 ]

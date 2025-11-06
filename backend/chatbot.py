@@ -14,15 +14,34 @@ class ArtGalleryChatbot:
         self.system_prompt = f"""You are an art gallery assistant helping buyers discover artwork through natural conversation.
 
 Your role:
-1. Have a brief, friendly conversation (2-4 turns) to understand preferences
+1. Have a brief conversation (2-3 turns max) to understand preferences
 2. Extract: style, colors, mood, and budget
-3. Once you have enough info (at least 2-3 preferences), recommend artworks
+3. Ask about preferences BEFORE recommending, unless user explicitly says "anything/any"
 
-Guidelines:
-- Be conversational but concise (2-3 sentences max)
-- Ask one preference at a time
-- If user is vague, suggest popular options
-- After gathering preferences, say "Let me find perfect pieces for you!"
+CRITICAL RULES FOR WHEN TO RECOMMEND:
+
+**Recommend IMMEDIATELY (no questions) if:**
+- User says "anything", "any", "I'm okay with anything", "show me anything"
+- User says "give me any image/artwork/painting"
+- User explicitly asks to see artworks without specifying preferences
+
+**ASK for preferences FIRST if:**
+- User only mentions budget (e.g., "under 2 lakhs") → Ask about style/color/mood preferences
+- User mentions only 1-2 criteria → Ask about the missing ones
+- First message from user → Always ask what they're looking for
+
+**After asking 1-2 questions:**
+- If user still says "anything" or "any" → RECOMMEND IMMEDIATELY
+- If user provides preferences → RECOMMEND with those preferences
+- Maximum 3 conversational turns before recommending
+
+BUDGET EXTRACTION (IMPORTANT):
+- "under 1 lakh" or "under 100000" → max_price: 100000
+- "under 2 lakhs" or "under 200000" → max_price: 200000
+- "under 3 lakhs" or "under 300000" → max_price: 300000
+- "under 4 lakhs" or "under 400000" → max_price: 400000
+- "under 5 lakhs" or "under 500000" → max_price: 500000
+- If no budget mentioned → max_price: 500000
 
 Available options:
 - Styles: {', '.join(self.available_filters['styles'])}
@@ -30,9 +49,9 @@ Available options:
 - Moods: {', '.join(self.available_filters['moods'])}
 
 When ready to recommend, respond with JSON ONLY (no additional text):
-{{"action": "recommend", "filters": {{"style": "...", "colors": ["..."], "mood": "...", "max_price": 200000}}}}
+{{"action": "recommend", "filters": {{"max_price": 200000, "style": "classical", "colors": ["blue"]}}}}
 
-Otherwise, continue conversation naturally."""
+Otherwise, continue conversation naturally and ask about preferences."""
 
     def call_gemini(self, prompt: str) -> str:
         """Call Gemini API directly via REST"""
@@ -104,7 +123,37 @@ Otherwise, continue conversation naturally."""
         """Format artwork recommendations as conversational response"""
 
         if not artworks:
-            return "I couldn't find exact matches, but let me show you some beautiful pieces you might love!"
+            # Build a more specific apology message
+            criteria = []
+            if filters.get('max_price'):
+                criteria.append(f"under ₹{filters['max_price']:,}")
+            if filters.get('style'):
+                criteria.append(f"{filters['style']} style")
+            if filters.get('colors'):
+                criteria.append(f"{', '.join(filters['colors'])} colors")
+            if filters.get('mood'):
+                criteria.append(f"{filters['mood']} mood")
+
+            if criteria:
+                criteria_str = " with ".join(criteria)
+
+                # Check if we have items matching partial criteria
+                # Try without mood/color filters
+                relaxed_filters = {'max_price': filters.get('max_price', 500000)}
+                if filters.get('style'):
+                    relaxed_filters['style'] = filters['style']
+
+                relaxed_results = self.recommender.filter_artworks(relaxed_filters)
+
+                if relaxed_results:
+                    return f"I couldn't find artworks with all your preferences ({criteria_str}). Would you like to see artworks that match some of your criteria, or would you like to adjust your preferences?"
+                elif 'max_price' in filters:
+                    min_price = min(art['price'] for art in self.recommender.artworks)
+                    return f"I apologize, but we don't have artworks under ₹{filters['max_price']:,}. Our most affordable piece is ₹{min_price:,}. Would you like to see artworks in a different price range?"
+                else:
+                    return "I couldn't find exact matches for your preferences. Would you like to try different criteria?"
+            else:
+                return "I couldn't find matches. Could you tell me more about what you're looking for?"
 
         response = f"Based on your preferences, I found {len(artworks)} stunning pieces:\n\n"
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery AI Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,55 +12,182 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #a855f7;
+            --primary-dark: #7c3aed;
+            --primary-glow: #c084fc;
+            --secondary: #14b8a6;
+            --secondary-light: #5eead4;
+            --accent: #f43f5e;
+            --accent-light: #fda4af;
+            --gold: #fbbf24;
+            --gold-light: #fde68a;
+            --background: #fefbff;
+            --foreground: #1e1b29;
+            --card: #ffffff;
+            --border: #f0e7ff;
+            --muted: #faf5ff;
+            --muted-foreground: #71717a;
+            --shadow: rgba(168, 85, 247, 0.15);
+            --shadow-strong: rgba(168, 85, 247, 0.25);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4c1d95 50%, #0f766e 75%, #115e59 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
+            color: var(--foreground);
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         .container {
-            width: 90%;
-            max-width: 900px;
+            width: 100%;
+            max-width: 1000px;
             height: 90vh;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: var(--card);
+            border-radius: 28px;
+            box-shadow:
+                0 30px 90px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                0 0 60px var(--shadow);
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #6b21a8 100%);
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 36px 32px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px var(--shadow-strong);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(94, 234, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 25px 25px;
+            opacity: 1;
+            animation: headerShine 8s ease-in-out infinite;
+        }
+
+        @keyframes headerShine {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
         }
 
         .header h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -0.8px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #ffffff, #e0d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .header p {
-            font-size: 14px;
-            opacity: 0.9;
+            font-size: 16px;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
         }
 
         .chat-container {
             flex: 1;
             overflow-y: auto;
-            padding: 20px;
-            background: #f7f7f7;
+            padding: 32px;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+                linear-gradient(to bottom, var(--muted) 0%, var(--background) 100%);
+        }
+
+        .chat-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .chat-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .chat-container::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
 
         .message {
-            margin-bottom: 15px;
+            margin-bottom: 24px;
             display: flex;
             align-items: flex-start;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .message.user {
@@ -67,139 +195,373 @@
         }
 
         .message-content {
-            max-width: 70%;
-            padding: 12px 16px;
-            border-radius: 18px;
+            max-width: 75%;
+            padding: 18px 24px;
+            border-radius: 24px;
             word-wrap: break-word;
+            line-height: 1.65;
+            font-size: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .message.assistant .message-content {
-            background: white;
-            color: #333;
-            border: 1px solid #e0e0e0;
+            background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+            color: var(--foreground);
+            border: 2px solid var(--border);
+            border-radius: 24px 24px 24px 6px;
+            box-shadow: 0 4px 20px var(--shadow);
         }
 
         .message.user .message-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #7c3aed 100%);
             color: white;
+            border-radius: 24px 24px 6px 24px;
+            font-weight: 500;
+            box-shadow: 0 4px 20px var(--shadow-strong);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .artwork-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ffffff 0%, #fefbff 100%);
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 16px;
+            box-shadow: 0 10px 40px var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 75%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artwork-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--gold));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .artwork-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px var(--shadow-strong);
+            border-color: var(--primary-glow);
+        }
+
+        .artwork-card:hover::before {
+            opacity: 1;
         }
 
         .artwork-card img {
             width: 100%;
-            max-height: 300px;
-            object-fit: contain;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            background: #f9f9f9;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--muted), #e0d4ff);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--border);
+        }
+
+        .artwork-card img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
         }
 
         .artwork-info {
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.8;
+            color: var(--muted-foreground);
+        }
+
+        .artwork-info > div {
+            margin-bottom: 10px;
         }
 
         .artwork-info strong {
-            color: #667eea;
+            color: var(--foreground);
+            font-weight: 600;
+            margin-right: 8px;
         }
 
         .artwork-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 18px;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        .artwork-price {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 18px 0 0 0;
+            padding-top: 18px;
+            border-top: 2px solid var(--border);
+            letter-spacing: -0.5px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
         }
 
         .input-container {
             display: flex;
-            padding: 15px;
-            background: white;
-            border-top: 1px solid #e0e0e0;
+            padding: 28px;
+            background: linear-gradient(to top, #ffffff, #fefbff);
+            border-top: 2px solid var(--border);
+            gap: 14px;
+            box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.05);
         }
 
         .input-container input {
             flex: 1;
-            padding: 12px 16px;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            font-size: 14px;
+            padding: 18px 28px;
+            border: 2px solid var(--border);
+            border-radius: 32px;
+            font-size: 15px;
             outline: none;
-            transition: border-color 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Inter', sans-serif;
+            background: var(--muted);
+            color: var(--foreground);
+            font-weight: 500;
         }
 
         .input-container input:focus {
-            border-color: #667eea;
+            border-color: var(--primary);
+            background: var(--card);
+            box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15), 0 4px 16px var(--shadow);
+            transform: translateY(-1px);
+        }
+
+        .input-container input::placeholder {
+            color: var(--muted-foreground);
+            font-weight: 400;
         }
 
         .input-container button {
-            margin-left: 10px;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 18px 36px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #6b21a8 100%);
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 32px;
             cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: transform 0.2s;
+            font-size: 15px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 20px var(--shadow-strong);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
-        .input-container button:hover {
-            transform: scale(1.05);
+        .input-container button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .input-container button:hover::before {
+            left: 100%;
+        }
+
+        .input-container button:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px var(--shadow-strong);
+        }
+
+        .input-container button:active:not(:disabled) {
+            transform: translateY(-1px);
         }
 
         .input-container button:disabled {
-            opacity: 0.5;
+            opacity: 0.6;
             cursor: not-allowed;
+            transform: none;
         }
 
         .typing-indicator {
             display: none;
-            padding: 10px;
-            font-style: italic;
-            color: #999;
+            padding: 16px 28px;
+            margin-bottom: 20px;
         }
 
         .typing-indicator.active {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .typing-indicator .dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-indicator .dot {
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .typing-indicator .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .typing-indicator .text {
+            color: var(--muted-foreground);
+            font-size: 14px;
+            font-style: italic;
         }
 
         .badge {
             display: inline-block;
-            padding: 4px 10px;
-            background: #f0f0f0;
-            border-radius: 12px;
-            font-size: 12px;
-            margin: 2px;
-            color: #666;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 2px solid;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge.color {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            color: #1e3a8a;
+            border-color: #60a5fa;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+
+        .badge.mood {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            color: #78350f;
+            border-color: #fbbf24;
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
         }
 
         .error-message {
-            background: #fee;
-            color: #c33;
-            padding: 10px;
-            border-radius: 8px;
-            margin: 10px 0;
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #991b1b;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 16px 0;
             font-size: 14px;
+            border: 1px solid #fca5a5;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
             .container {
                 width: 100%;
                 height: 100vh;
                 border-radius: 0;
+                max-width: none;
+            }
+
+            .header {
+                padding: 24px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .chat-container {
+                padding: 20px 16px;
             }
 
             .message-content {
                 max-width: 85%;
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+
+            .artwork-card {
+                padding: 16px;
+                max-width: 85%;
+            }
+
+            .artwork-title {
+                font-size: 20px;
+            }
+
+            .artwork-card img {
+                max-height: 220px;
+            }
+
+            .input-container {
+                padding: 16px;
+            }
+
+            .input-container input {
+                padding: 14px 18px;
+                font-size: 14px;
+            }
+
+            .input-container button {
+                padding: 14px 24px;
+                font-size: 14px;
+            }
+
+            .input-container button span {
+                display: none;
             }
         }
     </style>
@@ -207,8 +569,20 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Art Gallery AI Assistant</h1>
-            <p>Discover your perfect artwork through conversation</p>
+            <div class="header-content">
+                <div class="header-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l9 4.9V17c0 .5-.2.9-.6 1.2l-7.8 5.2a1.5 1.5 0 01-1.2 0l-7.8-5.2c-.4-.3-.6-.7-.6-1.2V6.9L12 2z"/>
+                        <path d="M12 22V12"/>
+                        <path d="M12 12L3 7"/>
+                        <path d="M12 12l9-5"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Art Gallery AI Assistant</h1>
+                    <p>Discover your perfect artwork through conversation</p>
+                </div>
+            </div>
         </div>
 
         <div class="chat-container" id="chatContainer">
@@ -216,7 +590,12 @@
         </div>
 
         <div class="typing-indicator" id="typingIndicator">
-            Assistant is typing...
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <span class="text">Assistant is typing...</span>
         </div>
 
         <div class="input-container">
@@ -226,7 +605,13 @@
                 placeholder="Type your message here..."
                 autocomplete="off"
             />
-            <button id="sendBtn" onclick="sendMessage()">Send</button>
+            <button id="sendBtn" onclick="sendMessage()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send</span>
+            </button>
         </div>
     </div>
 

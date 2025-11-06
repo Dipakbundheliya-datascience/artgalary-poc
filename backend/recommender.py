@@ -83,10 +83,9 @@ class ArtworkRecommender:
         # First filter
         filtered = self.filter_artworks(filters)
 
-        # If no matches, return popular items
+        # If no matches, return empty list (chatbot will handle with apology message)
         if not filtered:
-            filtered = sorted(self.artworks, key=lambda x: x['price'], reverse=True)[:limit]
-            return filtered
+            return []
 
         # Score and sort
         scored = [(art, self.score_artwork(art, filters)) for art in filtered]
