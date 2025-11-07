@@ -14,6 +14,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
+// Function to scroll to top of chat (where instructions are)
+function scrollToTop() {
+    const chatContainer = document.getElementById('chatContainer');
+    chatContainer.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 async function initChat() {
     try {
         // Add instruction message first (centered)
@@ -24,6 +33,10 @@ async function initChat() {
         const data = await response.json();
 
         addMessage('assistant', data.message);
+
+        // Scroll to top after loading initial messages
+        const chatContainer = document.getElementById('chatContainer');
+        chatContainer.scrollTop = 0;
     } catch (error) {
         console.error('Error initializing chat:', error);
         showError('Failed to connect to the server. Please make sure the backend is running.');
