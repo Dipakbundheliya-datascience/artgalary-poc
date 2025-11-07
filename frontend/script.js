@@ -68,8 +68,8 @@ function addArtworkCards(artworks) {
             maximumFractionDigits: 0
         }).format(artwork.price);
 
-        // Calculate age for period
-        const periodWithAge = artwork.period ? artwork.period + calculateArtworkAge(artwork.period) : '';
+        // Format period as "Since YEAR"
+        const periodFormatted = artwork.period ? formatPeriod(artwork.period) : '';
 
         card.innerHTML = `
             <img src="${artwork.image_url}"
@@ -82,7 +82,7 @@ function addArtworkCards(artworks) {
             <div class="artwork-info">
                 <div><strong>Medium:</strong> ${artwork.medium}</div>
                 ${artwork.dimensions ? `<div><strong>Dimensions:</strong> ${artwork.dimensions}</div>` : ''}
-                ${periodWithAge ? `<div><strong>Period:</strong> ${periodWithAge}</div>` : ''}
+                ${periodFormatted ? `<div>${periodFormatted}</div>` : ''}
                 <div style="margin-top: 12px;">
                     <strong>Style:</strong><br>
                     ${artwork.style.map(s => `<span class="badge style">${s}</span>`).join('')}
@@ -213,19 +213,17 @@ async function sendMessage() {
     }
 }
 
-// Function to calculate age from period
-function calculateArtworkAge(period) {
+// Function to format period as "Since YEAR"
+function formatPeriod(period) {
     if (!period) return '';
 
     // Extract year from period string (handles formats like "1865", "ca. 1835", "1570s", "1290–1300")
     const yearMatch = period.match(/(\d{4})/);
     if (yearMatch) {
-        const year = parseInt(yearMatch[1]);
-        const currentYear = new Date().getFullYear();
-        const age = currentYear - year;
-        return ` (${age} years old)`;
+        const year = yearMatch[1];
+        return `Since ${year}`;
     }
-    return '';
+    return period; // Return as-is if no year found
 }
 
 // Export artworks to PDF
@@ -412,15 +410,12 @@ async function exportToPDF(artworks) {
                 yPosition += 6 * dimText.length;
             }
 
-            // Period with age calculation
+            // Period formatted as "Since YEAR"
             if (artwork.period) {
-                pdf.setTextColor(50, 50, 50);
-                pdf.setFont(undefined, 'bold');
-                pdf.text('Period: ', margin, yPosition);
-                pdf.setFont(undefined, 'normal');
                 pdf.setTextColor(100, 100, 100);
-                const ageText = calculateArtworkAge(artwork.period);
-                pdf.text(artwork.period + ageText, margin + 18, yPosition);
+                pdf.setFont(undefined, 'normal');
+                const periodText = formatPeriod(artwork.period);
+                pdf.text(periodText, margin, yPosition);
                 yPosition += 6;
             }
 
