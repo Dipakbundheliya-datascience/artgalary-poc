@@ -46,7 +46,16 @@ BUDGET EXTRACTION (IMPORTANT):
 - "under 3 lakhs" or "under 300000" → max_price: 300000
 - "under 4 lakhs" or "under 400000" → max_price: 400000
 - "under 5 lakhs" or "under 500000" → max_price: 500000
-- If no budget mentioned → max_price: 500000
+- "under 6 lakhs" or "under 600000" → max_price: 600000
+- "under 7 lakhs" or "under 700000" → max_price: 700000
+- If no budget mentioned → max_price: 700000
+
+**STYLE MAPPING (CRITICAL):**
+When user says "classical" or "classic", interpret it as:
+- Renaissance
+- Baroque
+- Rococo
+Search for these styles in the database.
 
 **IMPORTANT - When asking about budget:**
 Always mention our price range in the question. Use this format:
@@ -59,7 +68,8 @@ Available options:
 - Price Range: ₹{min_lakhs} lakhs to ₹{max_lakhs} lakhs
 
 When ready to recommend, respond with JSON ONLY (no additional text):
-{{"action": "recommend", "filters": {{"max_price": 200000, "style": "classical", "colors": ["blue"]}}}}
+For "classical" style, use one of: Renaissance, Baroque, or Rococo
+Example: {{"action": "recommend", "filters": {{"max_price": 500000, "style": "Renaissance", "colors": ["brown"]}}}}
 
 Otherwise, continue conversation naturally and ask about preferences."""
 
@@ -149,7 +159,7 @@ Otherwise, continue conversation naturally and ask about preferences."""
 
                 # Check if we have items matching partial criteria
                 # Try without mood/color filters
-                relaxed_filters = {'max_price': filters.get('max_price', 500000)}
+                relaxed_filters = {'max_price': filters.get('max_price', 10000000)}  # Use a very high price if no max_price specified
                 if filters.get('style'):
                     relaxed_filters['style'] = filters['style']
 
@@ -157,11 +167,15 @@ Otherwise, continue conversation naturally and ask about preferences."""
 
                 if relaxed_results:
                     return f"I couldn't find artworks with all your preferences ({criteria_str}). Would you like to see artworks that match some of your criteria, or would you like to adjust your preferences?"
-                elif 'max_price' in filters:
-                    min_price = min(art['price'] for art in self.recommender.artworks)
-                    return f"I apologize, but we don't have artworks under ₹{filters['max_price']:,}. Our most affordable piece is ₹{min_price:,}. Would you like to see artworks in a different price range?"
                 else:
-                    return "I couldn't find exact matches for your preferences. Would you like to try different criteria?"
+                    # Check if it's a price issue
+                    min_price = min(art['price'] for art in self.recommender.artworks)
+                    max_price_all = max(art['price'] for art in self.recommender.artworks)
+
+                    if filters.get('max_price') and filters['max_price'] < min_price:
+                        return f"I apologize, but we don't have artworks under ₹{filters['max_price']:,}. Our most affordable piece is ₹{min_price:,}. Would you like to see artworks in a different price range?"
+                    else:
+                        return f"I couldn't find exact matches for your preferences ({criteria_str}). Would you like to try different criteria or see similar artworks?"
             else:
                 return "I couldn't find matches. Could you tell me more about what you're looking for?"
 
@@ -192,4 +206,4 @@ Otherwise, continue conversation naturally and ask about preferences."""
 
     def get_greeting(self) -> str:
         """Initial greeting message"""
-        return "Hello! I'm here to help you discover the perfect artwork. What kind of art are you looking for today? For example, do you prefer abstract, classical, or landscape pieces?"
+        return "Hello! I'm here to help you discover the perfect artwork. What kind of art are you looking for today? For example, do you prefer Renaissance, Baroque, Impressionism, or Landscape pieces?"

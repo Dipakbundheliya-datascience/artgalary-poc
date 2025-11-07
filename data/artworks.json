@@ -5,20 +5,10 @@
     "artist": "Joseph Mallord William Turner",
     "price": 450000,
     "currency": "INR",
-    "style": [
-      "portrait",
-      "classical"
-    ],
-    "colors": [
-      "black",
-      "white"
-    ],
+    "style": ["Landscape", "Romanticism"],
+    "colors": ["blue", "white", "gold", "turquoise", "beige", "brown"],
     "medium": "Oil on canvas",
-    "mood": [
-      "elegant",
-      "dramatic",
-      "bold"
-    ],
+    "mood": ["Serene", "Romantic"],
     "dimensions": "36 x 48 1/8 in. (91.4 x 122.2 cm)",
     "period": "ca. 1835",
     "availability": "available",
@@ -26,7 +16,11 @@
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP169568.jpg",
     "description": "Venice, from the Porch of Madonna della Salute",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "",
+    "room_type": ["Living Room", "Dining Room", "Study / Office", "Hallway"],
+    "interior_style":["Traditional", "Classic", "Elegant", "Formal"],
+    "size_category": "Large",
+    "orientation": "Horizontal"
   },
   {
     "id": "demo_2",
@@ -34,19 +28,10 @@
     "artist": "Jacques Louis David",
     "price": 380000,
     "currency": "INR",
-    "style": [
-      "portrait",
-      "classical"
-    ],
-    "colors": [
-      "brown",
-      "gold"
-    ],
+    "style": ["History Painting", "Renaissance"],
+    "colors": ["beige", "brown", "white", "red", "blue", "gray", "ochre"],
     "medium": "Oil on canvas",
-    "mood": [
-      "elegant",
-      "contemplative"
-    ],
+    "mood": ["Dramatic", "Tragic"],
     "dimensions": "51 x 77 1/4 in. (129.5 x 196.2 cm)",
     "period": "1787",
     "availability": "available",
@@ -54,7 +39,11 @@
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-13139-001.jpg",
     "description": "The Death of Socrates",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "",
+    "room_type": ["Study / Office", "Library", "Dining Room", "Entrance / Formal Room"],
+    "interior_style": ["Traditional", "Classic", "Formal"],
+    "size_category": "Extra Large",
+    "orientation": "Horizontal"
   },
   {
     "id": "demo_3",
@@ -62,20 +51,10 @@
     "artist": "Edgar Degas",
     "price": 320000,
     "currency": "INR",
-    "style": [
-      "portrait",
-      "classical"
-    ],
-    "colors": [
-      "blue",
-      "white",
-      "yellow"
-    ],
+    "style": ["Genre Painting", "Impressionism"],
+    "colors": ["green", "white", "beige", "blue", "pink", "brown", "gray"],
     "medium": "Oil on canvas",
-    "mood": [
-      "serene",
-      "peaceful"
-    ],
+    "mood": ["Joyful", "Elegant"],
     "dimensions": "32 7/8 x 30 3/8 in. (83.5 x 77.2 cm)",
     "period": "1874",
     "availability": "available",
@@ -83,7 +62,11 @@
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-20101-001.jpg",
     "description": "The Dance Class",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "French",
+    "room_type": ["Living Room", "Study / Office", "Hallway"],
+    "interior_style":  ["Traditional", "Classic", "Elegant", "Artistic"],
+    "size_category": "Medium",
+    "orientation": "Square"
   },
   {
     "id": "demo_4",
@@ -91,27 +74,22 @@
     "artist": "Rembrandt (Rembrandt van Rijn)",
     "price": 410000,
     "currency": "INR",
-    "style": [
-      "portrait",
-      "classical"
-    ],
-    "colors": [
-      "black",
-      "white"
-    ],
+    "style": ["Portrait", "Baroque"],
+    "colors": ["brown", "ochre", "black", "gold", "beige", "olive"],
     "medium": "Oil on canvas",
-    "mood": [
-      "contemplative",
-      "timeless"
-    ],
+    "mood": ["Contemplative", "Serene"],
     "dimensions": "31 5/8 x 26 1/2 in. (80.3 x 67.3 cm)",
     "period": "1660",
     "availability": "available",
     "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-16323-001.jpg",
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-16323-001.jpg",
-    "description": "Self-Portrait",
+    "description": "One of Rembrandt's late self-portraits, painted when the artist was 54 years old. It showcases his mastery of light and shadow, capturing profound psychological depth and the artist's unflinching self-examination.",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "Dutch",
+    "room_type": ["Study / Office", "Library", "Living Room", "Entrance / Formal Room"],
+    "interior_style": ["Traditional", "Classic", "Formal"],
+    "size_category": "Medium",
+    "orientation": "Vertical"
   },
   {
     "id": "demo_5",
@@ -119,27 +97,22 @@
     "artist": "Pieter Bruegel the Elder",
     "price": 290000,
     "currency": "INR",
-    "style": [
-      "portrait",
-      "impressionist"
-    ],
-    "colors": [
-      "pink",
-      "white"
-    ],
+    "style": ["Landscape", "Genre Painting", "Renaissance"],
+    "colors": ["gold", "yellow", "green", "brown", "beige", "blue", "olive"],
     "medium": "Oil on wood",
-    "mood": [
-      "intimate",
-      "elegant"
-    ],
-    "dimensions": "Overall, including added strips at top, bottom, and right, 46 7/8 x 63 3/4 in. (119 x 162 cm); original painted surface 45 7/8 x 62 7/8 in. (116.5 x 159.5 cm)",
+    "mood": ["Peaceful", "Serene"],
+    "dimensions": "46 7/8 x 63 3/4 in. (119 x 162 cm)",
     "period": "1565",
     "availability": "available",
     "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP119115.jpg",
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP119115.jpg",
     "description": "The Harvesters",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "Dutch",
+    "room_type": ["Dining Room", "Living Room", "Study / Office"],
+    "interior_style": ["Traditional", "Rustic", "Classic"],
+    "size_category": "Large",
+    "orientation": "Horizontal"
   },
   {
     "id": "demo_6",
@@ -147,28 +120,22 @@
     "artist": "Vincent van Gogh",
     "price": 480000,
     "currency": "INR",
-    "style": [
-      "landscape",
-      "classical"
-    ],
-    "colors": [
-      "green",
-      "yellow",
-      "brown"
-    ],
+    "style": ["Landscape", "Post-Impressionism"],
+    "colors": ["blue", "yellow", "green", "white", "turquoise", "gold"],
     "medium": "Oil on canvas",
-    "mood": [
-      "serene",
-      "peaceful"
-    ],
-    "dimensions": "28 13/16 × 36 3/4 in. (73.2 × 93.4 cm)",
+    "mood": ["Dynamic", "Expressive"],
+    "dimensions": "28 13/16 x 36 3/4 in. (73.2 x 93.4 cm)",
     "period": "1889",
     "availability": "available",
     "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg",
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1567.jpg",
     "description": "Wheat Field with Cypresses",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "Dutch",
+    "room_type": ["Living Room", "Bedroom", "Study / Office", "Dining Room"],
+    "interior_style": ["Modern", "Contemporary", "Artistic", "Traditional"],
+    "size_category": "Medium",
+    "orientation": "Horizontal"
   },
   {
     "id": "demo_7",
@@ -176,56 +143,45 @@
     "artist": "Duccio di Buoninsegna",
     "price": 490000,
     "currency": "INR",
-    "style": [
-      "landscape",
-      "impressionist"
-    ],
-    "colors": [
-      "yellow",
-      "blue",
-      "green"
-    ],
+    "style":  ["Religious", "Miniature Art"],
+    "colors": ["gold", "green", "red", "brown", "beige", "coral"],
     "medium": "Tempera and gold on wood",
-    "mood": [
-      "energetic",
-      "bold"
-    ],
-    "dimensions": "Overall, with engaged frame, 11 x 8 1/4 in. (27.9 x 21 cm); painted surface 9 3/8 x 6 1/2 in. (23.8 x 16.5 cm)",
-    "period": "ca. 1290–1300",
+    "mood": ["Serene", "Spiritual", "Peaceful"],
+    "dimensions": "11 x 8 1/4 in. (27.9 x 21 cm)",
+    "period": "ca. 1290\u20131300",
     "availability": "available",
     "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP142735.jpg",
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP142735.jpg",
     "description": "Madonna and Child",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "Italian",
+    "room_type": ["Chapel / Sacred Space", "Study / Office", "Bedroom", "Entrance / Formal Room"],
+    "interior_style": ["Traditional", "Classic", "Religious"],
+    "size_category": "Small",
+    "orientation": "Vertical"
   },
   {
     "id": "demo_8",
-    "title": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinç",
+    "title": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpin\u00e7on?)",
     "artist": "Edgar Degas",
     "price": 260000,
     "currency": "INR",
-    "style": [
-      "landscape",
-      "classical"
-    ],
-    "colors": [
-      "green",
-      "brown"
-    ],
+    "style": ["Portrait", "Impressionism", "Genre Painting"],
+    "colors": ["white", "blue", "yellow", "brown", "beige", "pink", "purple", "orange", "green"],
     "medium": "Oil on canvas",
-    "mood": [
-      "calming",
-      "peaceful"
-    ],
+    "mood": ["Contemplative", "Elegant"],
     "dimensions": "29 x 36 1/2 in. (73.7 x 92.7 cm)",
     "period": "1865",
     "availability": "available",
     "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-25460-001.jpg",
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25460-001.jpg",
-    "description": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpinçon?)",
+    "description": "A Woman Seated beside a Vase of Flowers (Madame Paul Valpin\u00e7on?)",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "French",
+    "room_type": ["Living Room", "Dining Room", "Bedroom", "Study / Office"],
+    "interior_style": ["Traditional", "Classic", "Elegant", "Romantic"],
+    "size_category": "Medium",
+    "orientation": "Horizontal"
   },
   {
     "id": "demo_9",
@@ -233,19 +189,10 @@
     "artist": "Vincent van Gogh",
     "price": 350000,
     "currency": "INR",
-    "style": [
-      "landscape",
-      "classical"
-    ],
-    "colors": [
-      "blue",
-      "green"
-    ],
+    "style": ["Landscape", "Post-Impressionism"],
+    "colors": ["green", "blue", "turquoise", "white", "yellow", "cream"],
     "medium": "Oil on canvas",
-    "mood": [
-      "dramatic",
-      "bold"
-    ],
+    "mood": ["Dramatic", "Expressive"],
     "dimensions": "36 3/4 x 29 1/8 in. (93.4 x 74 cm)",
     "period": "1889",
     "availability": "available",
@@ -253,7 +200,11 @@
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP130999.jpg",
     "description": "Cypresses",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "Dutch",
+    "room_type": ["Living Room", "Study / Office", "Bedroom", "Dining Room"],
+    "interior_style": ["Modern", "Contemporary", "Artistic", "Traditional"],
+    "size_category": "Medium",
+    "orientation": "Vertical"
   },
   {
     "id": "demo_10",
@@ -261,28 +212,22 @@
     "artist": "Joseph Hirsch",
     "price": 390000,
     "currency": "INR",
-    "style": [
-      "abstract",
-      "contemporary"
-    ],
-    "colors": [
-      "orange",
-      "red",
-      "yellow"
-    ],
+    "style": ["Modernism", "Genre Painting"],
+    "colors": ["black", "white", "gray", "charcoal"],
     "medium": "Pastel and graphite on orange paper",
-    "mood": [
-      "energetic",
-      "dramatic"
-    ],
-    "dimensions": "20 5/16 × 16 1/2 in. (51.6 × 41.9 cm)",
+    "mood": ["Dramatic", "Tragic"],
+    "dimensions": "20 5/16 x 16 1/2 in. (51.6 x 41.9 cm)",
     "period": "ca. 1940",
     "availability": "available",
     "image_url": "https://images.metmuseum.org/CRDImages/ma/original/sf43.46.9.jpg",
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ma/web-large/sf43.46.9.jpg",
     "description": "Air Raid",
     "department": "Modern and Contemporary Art",
-    "culture": ""
+    "culture": "American",
+    "room_type": ["Study / Office", "Gallery / Collection"],
+    "interior_style": ["Modern", "Contemporary", "Formal"],
+    "size_category": "Small",
+    "orientation": "Vertical"
   },
   {
     "id": "demo_11",
@@ -290,20 +235,10 @@
     "artist": "Paolo Veronese (Paolo Caliari)",
     "price": 440000,
     "currency": "INR",
-    "style": [
-      "impressionist",
-      "fine-art"
-    ],
-    "colors": [
-      "purple",
-      "blue",
-      "green"
-    ],
+    "style": ["Genre Painting", "Renaissance"],
+    "colors": ["purple", "gold", "blue", "green", "pink", "brown", "white", "beige"],
     "medium": "Oil on canvas",
-    "mood": [
-      "serene",
-      "expressive"
-    ],
+    "mood": ["Romantic", "Elegant"],
     "dimensions": "81 x 63 3/8 in. (205.7 x 161 cm)",
     "period": "1570s",
     "availability": "available",
@@ -311,7 +246,11 @@
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP167124.jpg",
     "description": "Mars and Venus United by Love",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "Italian",
+    "room_type": ["Entrance / Formal Room", "Study / Office", "Gallery / Collection"],
+    "interior_style": ["Traditional", "Classic", "Formal", "Elegant"],
+    "size_category": "Large",
+    "orientation": "Vertical"
   },
   {
     "id": "demo_12",
@@ -319,19 +258,10 @@
     "artist": "Camille Pissarro",
     "price": 250000,
     "currency": "INR",
-    "style": [
-      "portrait",
-      "classical"
-    ],
-    "colors": [
-      "red",
-      "brown"
-    ],
+    "style": ["Landscape", "Impressionism"],
+    "colors": ["gray", "blue", "green", "beige", "white", "lavender", "pink"],
     "medium": "Oil on canvas",
-    "mood": [
-      "elegant",
-      "dramatic"
-    ],
+    "mood": ["Serene", "Contemplative", "Peaceful"],
     "dimensions": "28 7/8 x 36 3/8 in. (73.3 x 92.4 cm)",
     "period": "1899",
     "availability": "available",
@@ -339,6 +269,321 @@
     "thumbnail_url": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-037.jpg",
     "description": "The Garden of the Tuileries on a Winter Afternoon",
     "department": "European Paintings",
-    "culture": ""
+    "culture": "French",
+    "room_type": ["Living Room", "Study / Office", "Dining Room", "Bedroom"],
+    "interior_style": ["Traditional", "Classic", "Elegant"],
+    "size_category": "Medium",
+    "orientation": "Horizontal"
+  },
+  {
+    "id": "demo_13",
+    "title": "Pair of Andirons (Fire Dogs)",
+    "artist": "Unknown African Artist",
+    "price": 180000,
+    "currency": "INR",
+    "style":["Miniature Art", "Genre Painting"],
+    "colors": [
+      "black",
+      "gray",
+      "metallic"
+    ],
+    "medium": "Cast iron or bronze",
+    "mood": ["Contemplative", "Serene"],
+    "dimensions": "Approximately 8-12 in. height (estimate)",
+    "period": "19th-20th century",
+    "availability": "available",
+    "image_url": "https://images.metmuseum.org/CRDImages/ad/original/130480.jpg",
+    "thumbnail_url": "https://images.metmuseum.org/CRDImages/ad/web-large/130480.jpg",
+    "description": "A pair of African andirons (fire dogs) featuring stylized human figures seated on functional supports. These decorative and utilitarian objects were used to support logs in a fireplace while also serving as status symbols and artistic expressions of African metalworking traditions.",
+    "department": "Arts of Africa, Oceania, and the Americas",
+    "culture": "African",
+    "room_type": ["Living Room", "Study / Office", "Gallery / Collection"],
+    "interior_style": ["Traditional", "Eclectic"],
+    "size_category": "Small",
+    "orientation": "Horizontal"
+  },
+  {
+    "id": "demo_14",
+    "title": "The House of Bijapur",
+    "artist": "Unknown Deccani Artist",
+    "price": 520000,
+    "currency": "INR",
+    "style": ["Miniature Art", "Religious"],
+    "colors": [
+      "pink",
+      "green",
+      "gold",
+      "blue",
+      "orange",
+      "purple",
+      "yellow",
+      "brown",
+      "white"
+    ],
+    "medium": "Opaque watercolor, ink, and gold on paper",
+    "mood": ["Elegant", "Formal"],
+    "dimensions": "Approximately 13 x 9 in. (33 x 22.9 cm)",
+    "period": "17th century",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/453183/903108/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/453183/903108/main-image",
+    "description": "A distinguished Deccani miniature painting from the Bijapur Sultanate depicting a formal court assembly. The ruler of Bijapur sits majestically on an ornate golden throne beneath an elaborate canopy, surrounded by courtiers, nobles, and attendants arranged in strict hierarchical order. The upper register features the characteristic Deccani landscape with pink-mauve rocky outcrops, white-domed structures, and verdant vegetation. Persian calligraphy graces the top border, while intricate floral patterns frame the entire composition. The lower register shows standing figures, emphasizing the ceremonial protocol of the Deccan sultanates. This masterpiece exemplifies the sophisticated fusion of Persian, Indian, and indigenous Deccani artistic traditions.",
+    "department": "Islamic Art",
+    "culture": "Bijapur Sultanate, Deccan, India",
+    "room_type": ["Living Room", "Study / Office", "Gallery / Collection", "Entrance / Formal Room"],
+    "interior_style": ["Traditional", "Eclectic", "Formal"],
+    "size_category": "Small",
+    "orientation": "Vertical"
+  },
+  {
+    "id": "demo_15",
+    "title": "The Virgin and Child with the Young Saint John the Baptist",
+    "artist": "François Boucher",
+    "price": 580000,
+    "currency": "INR",
+    "style": ["Religious", "Rococo"],
+    "colors": [
+      "blue",
+      "gold",
+      "pink",
+      "gray",
+      "green",
+      "white",
+      "beige",
+      "cream"
+    ],
+    "medium": "Oil on canvas",
+    "mood": ["Serene", "Tender", "Peaceful", "Elegant"],
+    "dimensions": "Oval format, approximately 30 x 24 in. (76.2 x 61 cm)",
+    "period": "1765",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/435744/802718/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/435744/802718/main-image",
+    "description": "A delicate Rococo devotional painting by François Boucher depicting the Virgin Mary tenderly holding the infant Jesus, accompanied by the young Saint John the Baptist. The composition is set within an elegant oval format, featuring a pastoral landscape with lush foliage and cherubs floating in the clouds above. The Virgin is draped in flowing robes of blue and gold, rendered with Boucher's characteristic soft, luminous palette and refined brushwork. The intimate scene combines religious sentiment with the graceful aesthetics of 18th-century French art, showcasing Boucher's mastery of both religious and secular subjects.",
+    "department": "European Paintings",
+    "culture": "French",
+    "room_type": ["Living Room", "Bedroom", "Study / Office", "Chapel / Sacred Space"],
+    "interior_style": ["Traditional", "Classic", "Elegant", "Romantic"],
+    "size_category": "Medium",
+    "orientation": "Vertical"
+  },
+  {
+    "id": "demo_16",
+    "title": "Don Gaspar de Guzmán (1587–1645), Count-Duke of Olivares",
+    "artist": "Juan Bautista Martínez del Mazo (Spanish, Cuenca ca. 1612–1667 Madrid)",
+    "price": 620000,
+    "currency": "INR",
+    "style": ["Portrait", "Baroque"],
+    "colors": [
+      "brown",
+      "gold",
+      "white",
+      "black",
+      "pink",
+      "blue",
+      "gray",
+      "green",
+      "beige"
+    ],
+    "medium": "Oil on canvas",
+    "mood": ["Dramatic", "Powerful", "Dynamic"],
+    "dimensions": "123 1/4 x 96 7/8 in. (313 x 246 cm)",
+    "period": "ca. 1635-1636",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437868/1857119/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437868/1857119/main-image",
+    "description": "A magnificent equestrian portrait by Diego Velázquez depicting Don Gaspar de Guzmán, Count-Duke of Olivares, the powerful chief minister to King Philip IV of Spain. The count-duke is shown mounted on a rearing white horse, dressed in elaborate armor with pink sash and plumed hat, holding a commander's baton. The dramatic composition captures the subject in a moment of dynamic action against a moody landscape with stormy skies. Velázquez's masterful technique is evident in the rich textures of the armor, fabric, and the horse's gleaming coat, demonstrating his unparalleled skill in capturing both physical presence and aristocratic authority.",
+    "department": "European Paintings",
+    "culture": "Spanish",
+    "room_type": ["Entrance / Formal Room", "Study / Office", "Gallery / Collection"],
+    "interior_style": ["Traditional", "Classic", "Formal"],
+    "size_category": "Extra Large",
+    "orientation": "Vertical"
+  },
+  {
+    "id": "demo_17",
+    "title": "The Muse of Painting",
+    "artist": "John La Farge (American, New York 1835–1910 Providence, Rhode Island)",
+    "price": 285000,
+    "currency": "INR",
+    "style": ["Genre Painting", "Romanticism"],
+    "colors": [
+      "gold",
+      "yellow",
+      "green",
+      "brown",
+      "beige",
+      "gray",
+      "blue",
+      "olive"
+    ],
+    "medium": "Oil on canvas",
+    "mood": ["Serene", "Contemplative", "Peaceful"],
+    "dimensions": "49 1/2 x 38 1/4 in. (125.7 x 97.2 cm)",
+    "period": "1870",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11379/35079/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11379/35079/main-image",
+    "description": "By 1870, La Farge had moved away from his early realistic manner to a more decorative, academic style of easel painting. 'The Muse of Painting' synthesizes the different and somewhat contradictory tendencies found in his work at this time. The landscape represents a site that artist painted frequently, the ridge behind Bishop Berkeley's Rock near his farm outside of Newport, Rhode Island. The figure belongs to the mainstream of nineteenth-century ideal painting, representing an allegory of the art of painting. In an odd twist, La Farge depicted the muse as an artist rather than as the inspiratrice of an artist. Her inspiration is the surrounding landscape of Newport, proving that nature is the true muse of painting. The landscape and overall composition are handled in highly decorative manner, mingling carefully observed details with dreamy, evocative colors.",
+    "department": "European Paintings",
+    "culture": "American",
+    "room_type": ["Living Room", "Bedroom", "Study / Office", "Gallery / Collection", "Chapel / Sacred Space"],
+    "interior_style": ["Traditional", "Classic", "Romantic", "Elegant"],
+    "size_category": "Small",
+    "orientation": "Vertical"
+  },
+  {
+    "id": "demo_18",
+    "title": "Schloss Milkel in Moonlight",
+    "artist": "Carl Gustav Carus",
+    "price": 340000,
+    "currency": "INR",
+    "style": ["Landscape", "Romanticism"],
+    "colors": [
+      "blue",
+      "gray",
+      "brown",
+      "black",
+      "gold",
+      "purple",
+      "yellow"
+    ],
+    "medium": "Oil on canvas",
+    "mood": ["Serene", "Mysterious"],
+    "dimensions": "11 1/4 x 8 1/2 in. (28.5 x 21.5 cm)",
+    "period": "ca. 1833-1835",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/788905/1860033/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/788905/1860033/main-image",
+    "description": "An evocative nocturnal landscape by Carl Gustav Carus depicting Schloss Milkel bathed in moonlight. The composition shows a manor house with illuminated windows nestled among trees, with the moon breaking through dramatic cloudy skies. The painting exemplifies the German Romantic movement's fascination with night scenes and the sublime beauty of nature. Carus, a physician, scientist, and close friend of Caspar David Friedrich, masterfully captures the interplay of natural and artificial light, creating a mood of mystery and contemplation typical of Romantic landscape painting.",
+    "department": "European Paintings",
+    "culture": "German",
+    "room_type": ["Living Room", "Bedroom", "Study / Office", "Library", "Hallway"],
+    "interior_style": ["Traditional", "Classic", "Romantic", "Elegant"],
+    "size_category": "Small",
+    "orientation": "Vertical"
+  },
+  {
+    "id": "demo_19",
+    "title": "View of Toledo",
+    "artist": "El Greco (Domenikos Theotokopoulos)",
+    "price": 680000,
+    "currency": "INR",
+    "style":["Landscape", "Renaissance", "Mannerism"],
+    "colors": [
+      "dark green",
+      "teal",
+      "gray",
+      "black",
+      "white",
+      "olive",
+      "blue"
+    ],
+    "medium": "Oil on canvas",
+    "mood": ["Dramatic", "Expressive", "Mysterious"],
+    "dimensions": "47 3/4 x 42 3/4 in. (121.3 x 108.6 cm)",
+    "period": "ca. 1599-1600",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436575/1455894/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436575/1455894/main-image",
+    "description": "One of El Greco's most celebrated masterpieces, this dramatic landscape depicts the ancient Spanish city of Toledo under threatening storm clouds. The composition shows the hilltop city with its cathedral and Alcázar rising majestically above the Tagus River valley, rendered in El Greco's distinctive expressionistic style with swirling, turbulent skies and an almost supernatural quality of light. The artist's unique vision transforms the cityscape into a spiritual and emotional experience, using elongated forms, intense colors, and dramatic contrasts between the dark storm clouds and luminous architecture. This is considered one of the greatest landscape paintings in Western art and exemplifies El Greco's highly personal and visionary approach to painting.",
+    "department": "European Paintings",
+    "culture": "Spanish (Greek-born artist)",
+    "room_type": ["Living Room", "Study / Office", "Library", "Gallery / Collection", "Dining Room", "Entrance / Formal Room"],
+    "interior_style": ["Traditional", "Classic", "Dramatic", "Formal"],
+    "size_category": "Large",
+    "orientation": "Vertical"
+  },
+  {
+    "id": "demo_20",
+    "title": "Drawing the Eel",
+    "artist": "Salomon van Ruysdael",
+    "price": 340000,
+    "currency": "INR",
+    "style": ["Landscape", "Genre Painting"],
+    "colors": ["brown", "gray", "blue", "green", "beige", "ochre", "white"],
+    "medium": "Oil on wood",
+    "mood": ["Serene", "Peaceful"],
+    "dimensions": "29 1/2 x 41 3/4 in. (74.9 x 106 cm)",
+    "period": "early 1650s",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437588/795902/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437588/795902/main-image",
+    "description": "A characteristic Dutch Golden Age landscape depicting fishermen drawing an eel from the water. The scene captures everyday life along a Dutch waterway with figures engaged in fishing activities, set beneath a vast cloudy sky. Salomon van Ruysdael masterfully renders the atmospheric quality of the Dutch countryside with his subtle tonal palette and skilled depiction of water reflections and clouded skies typical of his mature period.",
+    "department": "European Paintings",
+    "culture": "Dutch",
+    "room_type": ["Living Room", "Dining Room", "Study / Office", "Hallway"],
+    "interior_style": ["Traditional", "Classic", "Rustic", "Elegant"],
+    "size_category": "Medium",
+    "orientation": "Horizontal"
+  },
+  {
+    "id": "demo_21",
+    "title": "A White-throated Kingfisher",
+    "artist": "Unknown Mughal Artist",
+    "price": 480000,
+    "currency": "INR",
+    "style": ["Miniature Art", "Religious"],
+    "colors": ["blue", "gray", "white", "beige", "gold", "green", "brown", "pink"],
+    "medium": "Opaque watercolor and gold on paper",
+    "mood": ["Serene", "Contemplative", "Peaceful"],
+    "dimensions": "Approximately 8 x 12 in. (20.3 x 30.5 cm)",
+    "period": "ca. 1610-20",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/453250/903109/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/453250/903109/main-image",
+    "description": "An exquisite Mughal miniature depicting a white-throated kingfisher perched on rocky terrain. The bird is rendered with remarkable naturalistic detail, showing its distinctive gray-blue plumage, white throat markings, and long black beak. The composition includes delicate botanical elements with flowering trees and native vegetation against a plain beige background. Persian calligraphy adorns the upper left corner, identifying the bird. This painting exemplifies the Mughal fascination with natural history and the careful observation of flora and fauna during the reign of Emperor Jahangir, who was known for his patronage of naturalistic studies.",
+    "department": "Islamic Art",
+    "culture": "Mughal India",
+    "room_type": ["Study / Office", "Library", "Living Room", "Gallery / Collection"],
+    "interior_style": ["Traditional", "Eclectic", "Elegant"],
+    "size_category": "Small",
+    "orientation": "Horizontal"
+  },
+  {
+    "id": "demo_22",
+    "title": "Study of a Group of Trees",
+    "artist": "Circle of Nicolas Poussin",
+    "price": 220000,
+    "currency": "INR",
+    "style": ["Landscape", "Baroque"],
+    "colors": ["brown", "beige", "sepia", "cream", "tan"],
+    "medium": "Pen and brown ink",
+    "mood": ["Contemplative", "Serene", "Peaceful"],
+    "dimensions": "8 5/16 × 7 15/16 in. (21.1 × 20.2 cm)",
+    "period": "ca. 1625-50",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/428615/1865905/main-image",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/428615/1865905/main-image",
+    "description": "An accomplished nature study from the Circle of Nicolas Poussin depicting a group of mature trees rendered in pen and brown ink. The drawing showcases careful observation of natural forms, with detailed attention to the structure and foliage of the trees. The artist's flowing lines capture the organic movement and texture of the tree bark, branches, and leafy canopies. This type of preparatory study was common among artists in Poussin's circle, who studied nature directly before incorporating these elements into their classical landscape compositions. The drawing exemplifies the French classical tradition of combining naturalistic observation with artistic refinement.",
+    "department": "Drawings and Prints",
+    "culture": "French",
+    "room_type": ["Study / Office", "Library", "Gallery / Collection", "Hallway"],
+    "interior_style": ["Traditional", "Classic", "Formal", "Elegant"],
+    "size_category": "Small",
+    "orientation": "Square"
+  },
+  {
+    "id": "demo_23",
+    "title": "The Cathedrals of Art",
+    "artist": "Florine Stettheimer",
+    "price": 550000,
+    "currency": "INR",
+    "style":  ["Modernism", "Genre Painting"],
+    "colors": ["pink", "red", "white", "gold", "yellow", "blue", "purple", "orange", "lavender"],
+    "medium": "Oil on canvas",
+    "mood":["Joyful", "Whimsical", "Expressive"],
+    "dimensions": "60 1/4 × 50 1/4 in. (153 × 127.6 cm)",
+    "period": "1942",
+    "availability": "available",
+    "image_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488732/1005822/restricted",
+    "thumbnail_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/488732/1005822/restricted",
+    "description": "A dazzling allegorical painting by Florine Stettheimer depicting the art world as a theatrical cathedral. The composition features a grand white temple-like structure adorned with candelabras and decorated with figures representing various aspects of the art world. Stettheimer populates the scene with artists, collectors, museum directors, and cultural figures ascending red-carpeted steps toward the altar of art. The painting includes references to modern art movements, with text fragments like 'MUSEUM' and 'MODERN ART' visible. Her signature use of delicate pastel tones, particularly pinks and lavenders, combined with gold accents and whimsical details like floating figures and mythical creatures, creates a fantastical celebration of American art culture. This work is part of her 'Cathedrals' series, which also included 'Cathedrals of Broadway,' 'Cathedrals of Wall Street,' and 'Cathedrals of Fifth Avenue.'",
+    "department": "Modern and Contemporary Art",
+    "culture": "American",
+    "room_type": ["Living Room", "Gallery / Collection", "Study / Office"],
+    "interior_style": ["Modern", "Contemporary", "Artistic", "Bold"],
+    "size_category": "Large",
+    "orientation": "Vertical"
   }
 ]
