@@ -105,7 +105,22 @@ async def health_check():
 async def proxy_image(url: str):
     """Proxy image requests to avoid CORS issues"""
     try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
+        # Set up headers to mimic a browser request
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Referer': 'https://www.metmuseum.org/',
+            'Connection': 'keep-alive',
+        }
+
+        async with httpx.AsyncClient(
+            timeout=60.0,  # Increased timeout
+            follow_redirects=True,  # Follow redirects
+            verify=True,  # Verify SSL certificates
+            headers=headers
+        ) as client:
             # Fetch the image
             response = await client.get(url)
             response.raise_for_status()
@@ -116,6 +131,17 @@ async def proxy_image(url: str):
             # Determine content type
             content_type = response.headers.get('content-type', 'image/jpeg')
 
+            # If content type is not image, try to guess from URL
+            if not content_type.startswith('image/'):
+                if url.endswith('.jpg') or url.endswith('.jpeg'):
+                    content_type = 'image/jpeg'
+                elif url.endswith('.png'):
+                    content_type = 'image/png'
+                elif url.endswith('.webp'):
+                    content_type = 'image/webp'
+                else:
+                    content_type = 'image/jpeg'  # Default to JPEG
+
             # Return as data URL
             data_url = f"data:{content_type};base64,{image_base64}"
 
@@ -124,6 +150,8 @@ async def proxy_image(url: str):
                 "data_url": data_url,
                 "content_type": content_type
             }
+    except httpx.TimeoutException as e:
+        raise HTTPException(status_code=504, detail=f"Image request timed out: {str(e)}")
     except httpx.HTTPError as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch image: {str(e)}")
     except Exception as e:

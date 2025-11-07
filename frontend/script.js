@@ -235,9 +235,17 @@ async function exportToPDF(artworks) {
     const loadingDiv = document.createElement('div');
     loadingDiv.className = 'message assistant';
     loadingDiv.id = 'pdf-loading';
-    loadingDiv.innerHTML = '<div class="message-content">Generating PDF with all images... This may take a moment.</div>';
+    loadingDiv.innerHTML = '<div class="message-content">Generating PDF with all images... This may take a moment. (0/' + artworks.length + ' images loaded)</div>';
     chatContainer.appendChild(loadingDiv);
     chatContainer.scrollTop = chatContainer.scrollHeight;
+
+    // Helper function to update loading message
+    const updateLoadingMessage = (loaded, total) => {
+        const loadingMsg = document.getElementById('pdf-loading');
+        if (loadingMsg) {
+            loadingMsg.innerHTML = `<div class="message-content">Generating PDF with all images... (${loaded}/${total} images loaded)</div>`;
+        }
+    };
 
     try {
         const { jsPDF } = window.jspdf;
@@ -247,33 +255,46 @@ async function exportToPDF(artworks) {
         const pageHeight = pdf.internal.pageSize.getHeight();
         const margin = 20;
 
-        // Function to get image as base64 via backend proxy
-        const getBase64Image = async (url) => {
-            try {
-                console.log('Fetching image via backend proxy:', url);
+        // Function to get image as base64 via backend proxy with retry logic
+        const getBase64Image = async (url, retries = 3) => {
+            for (let attempt = 1; attempt <= retries; attempt++) {
+                try {
+                    console.log(`Fetching image via backend proxy (attempt ${attempt}/${retries}):`, url);
 
-                // Use backend proxy endpoint to avoid CORS issues
-                const proxyUrl = `${API_URL}/proxy-image?url=${encodeURIComponent(url)}`;
+                    // Use backend proxy endpoint to avoid CORS issues
+                    const proxyUrl = `${API_URL}/proxy-image?url=${encodeURIComponent(url)}`;
 
-                const response = await fetch(proxyUrl);
+                    const response = await fetch(proxyUrl);
 
-                if (!response.ok) {
-                    throw new Error(`Proxy request failed: ${response.status}`);
+                    if (!response.ok) {
+                        throw new Error(`Proxy request failed: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+
+                    if (data.success && data.data_url) {
+                        console.log('✓ Successfully loaded image via proxy:', url);
+                        return data.data_url;
+                    } else {
+                        console.error('Proxy returned unsuccessful response:', data);
+                        if (attempt < retries) {
+                            console.log(`Retrying... (${attempt + 1}/${retries})`);
+                            await new Promise(resolve => setTimeout(resolve, 1000 * attempt)); // Exponential backoff
+                            continue;
+                        }
+                        return null;
+                    }
+                } catch (error) {
+                    console.error(`Error loading image via proxy (attempt ${attempt}/${retries}):`, url, error);
+                    if (attempt < retries) {
+                        console.log(`Retrying... (${attempt + 1}/${retries})`);
+                        await new Promise(resolve => setTimeout(resolve, 1000 * attempt)); // Exponential backoff
+                    } else {
+                        return null;
+                    }
                 }
-
-                const data = await response.json();
-
-                if (data.success && data.data_url) {
-                    console.log('Successfully loaded image via proxy:', url);
-                    return data.data_url;
-                } else {
-                    console.error('Proxy returned unsuccessful response:', data);
-                    return null;
-                }
-            } catch (error) {
-                console.error('Error loading image via proxy:', url, error);
-                return null;
             }
+            return null;
         };
 
         // Add cover page
@@ -339,15 +360,18 @@ async function exportToPDF(artworks) {
                     pdf.addImage(imgData, 'JPEG', margin, yPosition, imgWidth, imgHeight);
                     yPosition += imgHeight + 10;
                     imagesLoaded++;
+                    updateLoadingMessage(imagesLoaded + imagesFailed, artworks.length);
                     console.log(`✓ Image ${i + 1} loaded successfully`);
                 } else {
                     console.warn(`✗ Image ${i + 1} failed to load`);
                     imagesFailed++;
+                    updateLoadingMessage(imagesLoaded + imagesFailed, artworks.length);
                     yPosition += 5;
                 }
             } catch (error) {
                 console.error('Error adding image to PDF:', error);
                 imagesFailed++;
+                updateLoadingMessage(imagesLoaded + imagesFailed, artworks.length);
                 yPosition += 5;
             }
 
