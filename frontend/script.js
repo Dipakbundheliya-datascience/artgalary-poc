@@ -64,7 +64,7 @@ function addInstructionMessage() {
     const instructionDiv = document.createElement('div');
     instructionDiv.className = 'instruction-message';
     instructionDiv.innerHTML = `
-        <h3>Welcome to MoodMatch AI Art Gallery</h3>
+        <h3>Welcome to  Canvas Curator</h3>
 
         <div class="instruction-section">
             <h4>
@@ -404,7 +404,7 @@ async function exportToPDF(artworks) {
         let yPosition = pageHeight / 2 - 30;
         pdf.setFontSize(28);
         pdf.setTextColor(124, 58, 237);
-        const title = 'MoodMatch AI';
+        const title = ' Canvas Curator AI';
         const titleWidth = pdf.getTextWidth(title);
         pdf.text(title, (pageWidth - titleWidth) / 2, yPosition);
 
@@ -567,7 +567,7 @@ async function exportToPDF(artworks) {
         }
 
         // Save the PDF
-        pdf.save('MoodMatch-AI-Artworks.pdf');
+        pdf.save('Canvas-Curator-AI-Artworks.pdf');
 
         // Remove loading message
         const loadingMsg = document.getElementById('pdf-loading');
