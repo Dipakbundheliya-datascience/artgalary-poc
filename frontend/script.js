@@ -16,6 +16,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 async function initChat() {
     try {
+        // Add instruction message first (centered)
+        addInstructionMessage();
+
+        // Then add the greeting message (left-aligned)
         const response = await fetch(`${API_URL}/greeting`);
         const data = await response.json();
 
@@ -24,6 +28,67 @@ async function initChat() {
         console.error('Error initializing chat:', error);
         showError('Failed to connect to the server. Please make sure the backend is running.');
     }
+}
+
+function addInstructionMessage() {
+    const chatContainer = document.getElementById('chatContainer');
+
+    // Define categories from the artworks data
+    const categories = [
+        'Renaissance', 'Baroque', 'Romanticism', 'Impressionism',
+        'Post-Impressionism', 'Landscape', 'Portrait', 'Genre Painting',
+        'History Painting', 'Religious', 'Rococo', 'Mannerism',
+        'Modernism', 'Miniature Art'
+    ];
+
+    // Define available colors
+    const colors = [
+        'Blue', 'Red', 'Green', 'Gold', 'White', 'Brown',
+        'Beige', 'Black', 'Gray', 'Pink', 'Yellow', 'Purple',
+        'Orange', 'Turquoise', 'Ochre', 'Olive'
+    ];
+
+    const instructionDiv = document.createElement('div');
+    instructionDiv.className = 'instruction-message';
+    instructionDiv.innerHTML = `
+        <h3>Welcome to MoodMatch AI Art Gallery</h3>
+
+        <div class="instruction-section">
+            <h4>
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                Available Art Categories
+            </h4>
+            <div class="instruction-tags">
+                ${categories.map(cat => `<span class="instruction-tag">${cat}</span>`).join('')}
+            </div>
+        </div>
+
+        <div class="instruction-section">
+            <h4>
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                </svg>
+                Available Colors
+            </h4>
+            <div class="instruction-tags">
+                ${colors.map(color => `<span class="instruction-tag">${color}</span>`).join('')}
+            </div>
+        </div>
+
+        <div class="instruction-section">
+            <h4>
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Price Range
+            </h4>
+            <div class="price-range">₹1.8 Lakh - ₹6.8 Lakh</div>
+        </div>
+    `;
+
+    chatContainer.appendChild(instructionDiv);
 }
 
 function addMessage(role, content) {
