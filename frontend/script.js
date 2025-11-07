@@ -202,11 +202,38 @@ function addArtworkCards(artworks) {
 }
 
 function showTyping() {
-    document.getElementById('typingIndicator').classList.add('active');
+    const chatContainer = document.getElementById('chatContainer');
+
+    // Remove any existing typing indicator
+    const existingTyping = document.getElementById('typingIndicatorMessage');
+    if (existingTyping) {
+        existingTyping.remove();
+    }
+
+    // Create typing indicator inside chat container
+    const typingDiv = document.createElement('div');
+    typingDiv.id = 'typingIndicatorMessage';
+    typingDiv.className = 'typing-indicator active';
+    typingDiv.innerHTML = `
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <span class="text">Assistant is typing...</span>
+    `;
+
+    chatContainer.appendChild(typingDiv);
+
+    // Scroll to bottom
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
 function hideTyping() {
-    document.getElementById('typingIndicator').classList.remove('active');
+    const typingIndicator = document.getElementById('typingIndicatorMessage');
+    if (typingIndicator) {
+        typingIndicator.remove();
+    }
 }
 
 function showError(message) {
